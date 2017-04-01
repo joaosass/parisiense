@@ -211,7 +211,22 @@ h4 + img{
     width: 150px;
 }
 
+#menu{
+    display: none;
+}
+
 @media(max-width: 600px){
+    #menu{
+        display: block;
+        position: fixed;
+        left: 100%;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        top: 5px;
+        width: 40px;
+        z-index: 25;
+        cursor: pointer;
+    }
     header.mostra nav{
         top: 70px;
     }
@@ -239,7 +254,7 @@ h4 + img{
     nav:last-child{
         left: 50%;
     }
-    header:hover nav{
+    header.show nav{
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
     }

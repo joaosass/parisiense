@@ -1,4 +1,6 @@
 var header = document.getElementById("header");
+var menu = document.getElementById("menu");
+var li = document.querySelectorAll("header li");
 
 onscroll = function(){
     scroller();
@@ -25,3 +27,13 @@ var options = {
 var map = new google.maps.Map(document.getElementById("mapa"), options);
 
 smoothScroll.init();
+
+menu.onclick = function(){
+    header.classList.toggle("show");
+}
+
+for(var i = 0; i < li.length; i++){
+    li[i].onclick = function(){
+        header.classList.remove("show");
+    }
+}
