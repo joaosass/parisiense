@@ -23,3 +23,5 @@ var options = {
 };
 
 var map = new google.maps.Map(document.getElementById("mapa"), options);
+
+smoothScroll.init();
