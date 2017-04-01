@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+*, *:after, *:before{
+    box-sizing: border-box;
+}
+
+body, a{
+    margin: 0;
+    color: rgba(0,0,0,.81);
+    text-decoration: none;
+    font: 400 1.2em/1.4 'PT Sans Narrow', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.21);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: #fff;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+header.mostra{
+    height: 70px;
+}
+
+header.mostra + main{
+    margin-top: 70px;
+}
+
+header.mostra li{
+    padding: 19px 10px;
+}
+
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header svg{
+    padding: 5px;
+    height: 100%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header li{
+    padding: 34px 10px;
+    background: #fff;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+header li:hover{
+    color: #fff;
+}
+
+header nav:first-child li:hover{
+    background: #0055A4;
+}
+
+header nav:last-child li:hover{
+    background: #EF4135;
+}
+
+main{
+    margin-top: 100px;
+    height: 200vh;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+h2, h3, .center{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+h2:after, h2:before{
+    content: "";
+    position: absolute;
+    top: 110%;
+    width: 30%;
+    left: 55%;
+    height: 3px;
+    background: #424242;
+    border-radius: 3px;
+}
+
+h2:before{
+    left: 15.5%;
+}
+
+h3, .center{
+    margin: 5px;
+}
+
+.outdoor{
+    width: 100%;
+}
+
+.container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.item{
+    width: 50%;
+}
+
+div.item{
+    padding: 10px;
+}
+
+.tr{
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px dotted;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.td:first-child{
+    width: 75%;
+    text-align: left;
+}
+
+.td:last-child{
+    width: 25%;
+    text-align: right;
+    font-style: italic;
+    color: #ef4135;
+}
+
+.left .td:last-child{
+    color: #0055a4;
+}
+
+.blue{
+    background: #003D7D;
+    padding: 1em 0 0 0;
+    color: rgba(255,255,255,.87);
+}
+
+.blue h2:after, .blue h2:before, footer h2:after, footer h2:before{
+    background: rgba(255,255,255,.7);
+}
+
+.center.min{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#mapa{
+    width: 100%;
+    height: 30vw;
+}
+
+footer{
+    background: #424242;
+    color: rgba(255,255,255,.87);
+}
+
+.container.dois .item{
+    width: 33%;
+}
+
+h4, h4 + p{
+    text-align: center;
+    margin: 5px 0;
+}
+
+h4 + img{
+    width: 50px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.minlogo svg{
+    width: 150px;
+}
+
+@media(max-width: 600px){
+    header.mostra nav{
+        top: 70px;
+    }
+    nav{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 50%;
+        -webkit-transform-origin: center top;
+        transform-origin: center top;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    ul.flex{
+        display: block;
+        width: 100%;
+    }
+    ul.flex li{
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    nav:last-child{
+        left: 50%;
+    }
+    header:hover nav{
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    .item, .container.dois .item{
+        width: 100%;
+    }
+    img.item:last-child{
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    div.item:first-child{
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    #mapa{
+        height: 50vw;
+    }
+}
+
+@media(max-width: 400px){
+    #mapa{
+        height: 70vw;
+    }
+}
