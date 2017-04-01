@@ -13,7 +13,7 @@ function scroller(){
     }
 }
 
-var latlng = new google.maps.LatLng(-48.1800401, -21.7878522);
+var latlng = new google.maps.LatLng(-22.020375, -47.890664);
 
 var options = {
     zoom: 15,
